@@ -32,7 +32,7 @@ python3 plotTextDetails.py /books/TheBible.txt --title "Top 20 Non-Stop Words Us
 ## How To Run
 From Terminal, the following is what must be provided for the program to run.
 ```
-python3 plotTextDetails.py <Address to Book>
+python3 plotTextDetails.py <Path to Book>
 ```
 ### List of Customization Flags
 ### For Frequency Graph And Collocations
