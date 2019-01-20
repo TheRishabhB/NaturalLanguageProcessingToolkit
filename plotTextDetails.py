@@ -91,11 +91,13 @@ def main():
     # Default Values and Parsing Input Values
     # Graph Values
     num_points = 30
-    title = "Top " + str(num_points) + " Useful Words For " + str(sys.argv[1])
+    if "--numPoints" in sys.argv:
+        num_points = sys.argv[sys.argv.index("--numPoints") + 1]
 
     y_label = "Frequencies"
     line_width = 3
 
+    title = "Top " + str(num_points) + " Useful Words For " + str(sys.argv[1])
     if "--title" in sys.argv:
         title = sys.argv[sys.argv.index("--title") + 1]
 
@@ -104,9 +106,6 @@ def main():
 
     if "--lineWidth" in sys.argv:
         line_width = sys.argv[sys.argv.index("--lineWidth") + 1]
-
-    if "--numPoints" in sys.argv:
-        num_points = sys.argv[sys.argv.index("--numPoints") + 1]
 
     # Stop Words Values
     blacklist = []
@@ -126,7 +125,8 @@ def main():
     # Paper Explaining The Math
     # https://nlp.stanford.edu/fsnlp/promo/colloc.pdf
     print("Words Commonly Used Together:")
-    print(tokenwrap(find_collocations(parsed_book, blacklist, num=int(num_collocations), window_size=int(window_size)), separator=" ; "))
+    print(tokenwrap(find_collocations(parsed_book, blacklist, num=int(num_collocations), window_size=int(window_size)),
+                    separator=" ; "))
 
     # Filter out Stop Words
     filtered_freq_dist = word_filter(FreqDist(parsed_book), blacklist)
