@@ -16,6 +16,7 @@ A Set of Programs to Show Details About Text
 ## Requirements
 * Python 3
 * NLTK
+* MatPlotLib
 
 ## Showcase
 ### Top 20 Non-Stop Words And Collocations For The Bible
