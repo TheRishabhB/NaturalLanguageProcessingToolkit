@@ -1,4 +1,4 @@
-# NaturalLanguageProcessing
+# NaturalLanguageProcessingToolkit
 A Set of Programs to Show Details About Text
 
 ## Functionality
