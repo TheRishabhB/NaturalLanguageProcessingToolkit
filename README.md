@@ -1,5 +1,5 @@
 # NaturalLanguageProcessing
-A Set of Programs to Plot Details About Text
+A Set of Programs to Show Details About Text
 
 ## Functionality
  * Plot most commonly used words in text
